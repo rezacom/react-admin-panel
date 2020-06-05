@@ -1,0 +1,76 @@
+@import './variables';  
+
+.header {
+    background: $primary-color-dark ;
+    height: 70px;
+    border-bottom: 1px solid rgba($light-color, .5);
+
+    &__sidebtn {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        &-btn {
+            background: none;
+            color: $white-color;
+            border: none;
+            padding: 5px;
+
+            &:focus {
+                outline: none;
+                border: 1px solid $white-color;
+            }
+            
+            svg {
+                
+                font-size: 30px;
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+
+        &-user {
+            position: relative;
+
+            a {
+                padding: 10px;
+                display: block;
+                svg {
+                    color: $white-color;
+                    font-size: 35px;
+                }
+            }
+
+            &__dropdown {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 150px;
+                border: 1px solid rgba($light-color, .5);
+                background-color: $primary-color-dark;
+                transition: all .3s;
+
+                &-open {
+                    opacity: 1;
+                    visibility: visible;
+                    top: 100%;
+                }
+            }
+
+           
+        }
+    }
+}
+
+.dropdown-open {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
